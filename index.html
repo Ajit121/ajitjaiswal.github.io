@@ -1,1 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajit Jaiswal | Senior Android Developer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Skill Bar Animations */
+    .skill-bar {
+      position: relative;
+      height: 1rem;
+      background-color: #1f2937;
+      border-radius: 0.5rem;
+      overflow: hidden;
+    }
+
+    .skill-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #3b82f6, #06b6d4);
+      width: 0;
+      border-radius: 0.5rem;
+      transition: width 1.5s ease-in-out;
+    }
+
+    .skill-icon {
+      width: 2rem;
+      height: 2rem;
+      margin-right: 0.5rem;
+    }
+
+    .timeline-circle {
+      width: 1rem;
+      height: 1rem;
+      border-radius: 50%;
+      background-color: #3b82f6;
+      border: 2px solid #111827;
+      position: absolute;
+      left: -0.5rem;
+      top: 0.25rem;
+    }
+  </style>
+  <script>
+    // Animate skill bars on scroll
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.skill-fill').forEach(bar => {
+        const rect = bar.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          bar.style.width = bar.getAttribute('data-width');
+        }
+      });
+    });
+  </script>
+</head>
+
+<body class="bg-gray-900 text-gray-100 font-sans">
+
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 py-32 text-center">
+    <h1 class="text-5xl font-bold mb-4">Ajit Jaiswal</h1>
+    <p class="text-xl mb-6">Senior Android Developer | Clean Architecture & Multi-Module Expert</p>
+    <div class="space-x-4">
+      <a href="https://drive.google.com/file/d/1iG4t208WGD1c7PDNoSYfjQXz0sRbId3J/view?usp=drive_link"
+        class="px-6 py-3 bg-blue-400 text-gray-900 font-semibold rounded-lg hover:bg-blue-500 transition">Resume</a>
+      <a href="https://github.com/Ajit121"
+        class="px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition">GitHub</a>
+      <a href="https://linkedin.com/in/ajit-jaiswal-154aa325"
+        class="px-6 py-3 bg-blue-600 font-semibold rounded-lg hover:bg-blue-700 transition">LinkedIn</a>
+    </div>
+  </section>
+
+  <!-- Android Skills Section -->
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-12 text-center">Android Skills & Expertise</h2>
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- Kotlin & Java -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://cdn.iconscout.com/icon/free/png-512/free-kotlin-logo-icon-svg-download-png-2944956.png?f=webp&w=256" alt="Kotlin" class="skill-icon">
+          <h3 class="text-xl font-semibold">Kotlin & Java</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="95%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Expert in production-grade Android apps with robust architecture.</p>
+      </div>
+
+      <!-- Jetpack Compose & MVVM -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://images.ctfassets.net/23aumh6u8s0i/4JQe27JmEip0X21uRGa0sr/ae23bfa547ed18a019c6fd92615f1eff/jetpack_compose_icon.png" alt="Jetpack Compose"
+            class="skill-icon">
+          <h3 class="text-xl font-semibold">Jetpack Compose & MVVM</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="90%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Modern UI, unidirectional data flow, and reactive architecture.</p>
+      </div>
+
+      <!-- Room, Retrofit, Coroutines -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://assets.carolus.kodeco.com/assets/murakami/category-icons/category-saving-data-persistence-android-9dc9eed34348d1d06a4365379fba3a54aa7aabd05d828dbb4de97349126d9718.svg" alt="Room" class="skill-icon">
+          <h3 class="text-xl font-semibold">Room, Retrofit, Coroutines</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="90%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Offline-first apps with fast API integration & Flow streams.</p>
+      </div>
+
+      <!-- Clean Architecture & Multi-Module -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://images.cdn-files-a.com/uploads/1228941/800_5b2517def10b8.png" alt="Architecture" class="skill-icon">
+          <h3 class="text-xl font-semibold">Clean Architecture & Multi-Module</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="95%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Scalable, maintainable codebases for enterprise apps.</p>
+      </div>
+
+      <!-- Testing & CI/CD -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e9/Jenkins_logo.svg/960px-Jenkins_logo.svg.png" alt="Testing" class="skill-icon">
+          <h3 class="text-xl font-semibold">Unit Testing & CI/CD</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="85%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Mockk, Mockito, Flutter Test, automated deployment pipelines.</p>
+      </div>
+
+      <!-- Performance & Optimization -->
+      <div class="bg-gray-800 p-6 rounded-xl shadow-md hover:scale-105 transition">
+        <div class="flex items-center mb-3">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/55/Android_Studio_Logo_%282023%29.svg/1280px-Android_Studio_Logo_%282023%29.svg.png" alt="Performance" class="skill-icon">
+          <h3 class="text-xl font-semibold">Performance Optimization</h3>
+        </div>
+        <div class="skill-bar">
+          <div class="skill-fill" data-width="90%"></div>
+        </div>
+        <p class="text-gray-300 mt-2 text-sm">Load time reduction, memory efficiency, offline-first approach.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Spendly Project Section -->
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-10 text-center">Spendly – Your Smart Expense Tracker</h2>
+
+    <div class="md:flex md:gap-10 items-center">
+      <!-- Image Carousel -->
+      <div class="w-full md:w-1/2">
+        <div class="relative overflow-hidden rounded-xl" style="height:600px;">
+          <div class="carousel flex transition-transform duration-500" id="spendlyCarousel" style="height:100%;">
+            <div class="flex-shrink-0 w-full h-full flex items-center justify-center">
+              <img
+                src="https://play-lh.googleusercontent.com/EQqk0FVLeWJs3qYLztsaCCviiXU_FQ6-_NX5JIOKU-8YVNkLomrPitOVCpcRTPQHGU_QSFIxhW991YTEyYfgrw=w2560-h1440-rw"
+                style="max-height:100%; max-width:100%; object-fit:contain;" />
+            </div>
+            <div class="flex-shrink-0 w-full h-full flex items-center justify-center">
+              <img
+                src="https://play-lh.googleusercontent.com/URSI5PUu9OcNJ-bZoeGVyK-R-5D4Mz6TRyFEAxqESKVVCWC1R_wrBOryhcdl8ZNtg4lW4XcoyNHrWXHeBbyX=w2560-h1440-rw"
+                style="max-height:100%; max-width:100%; object-fit:contain;" />
+            </div>
+            <div class="flex-shrink-0 w-full h-full flex items-center justify-center">
+              <img
+                src="https://play-lh.googleusercontent.com/Z2TipdwIrRkFRfjixOLMrGy_3jOG4a3jDBZW4f1qzKm0W03ZPaAt2WR8scnV6pQJ_v5iC_vTOHP_rxTAiT74Kg=w2560-h1440-rw"
+                style="max-height:100%; max-width:100%; object-fit:contain;" />
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button
+            class="absolute left-2 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 text-white p-2 rounded-full"
+            onclick="prevSlide()">❮</button>
+          <button
+            class="absolute right-2 top-1/2 transform -translate-y-1/2 bg-gray-700 bg-opacity-50 text-white p-2 rounded-full"
+            onclick="nextSlide()">❯</button>
+        </div>
+      </div>
+
+      <!-- Project Details -->
+<div class="mt-6 md:mt-0 md:w-1/2 text-gray-300">
+  <div class="bg-gray-800 p-6 rounded-xl shadow-lg space-y-4">
+    <h3 class="text-2xl font-bold text-white mb-2">Spendly – Your Smart Expense Tracker</h3>
+    <p class="text-gray-300">Take control of your finances with Spendly! Track income, expenses, and budgets in one place. Visualize trends with intuitive charts, set savings goals, and stay on top of your financial health. Simple, fast, and secure – perfect for managing your money on the go.</p>
+    
+    <ul class="space-y-3">
+      <li class="flex items-start gap-3">
+        <span class="text-blue-400 text-xl mt-1">💾</span>
+        <span>Automatic backup to personal Google Drive – never lose your data</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-green-400 text-xl mt-1">💰</span>
+        <span>Track daily expenses and income effortlessly</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-yellow-400 text-xl mt-1">📊</span>
+        <span>Visual charts to understand spending patterns</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-purple-400 text-xl mt-1">🎯</span>
+        <span>Set budgets and savings goals</span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-red-400 text-xl mt-1">⏰</span>
+        <span>
+          Expense Reminders: Today/Tomorrow/X Days, customizable notifications, quick Home Screen view
+        </span>
+      </li>
+      <li class="flex items-start gap-3">
+        <span class="text-cyan-400 text-xl mt-1">🔒</span>
+        <span>Secure and user-friendly interface</span>
+      </li>
+    </ul>
+
+    <a href="https://play.google.com/store/apps/details?id=com.aj.spendly" target="_blank"
+       class="inline-block mt-4 px-6 py-3 bg-blue-500 text-white font-semibold rounded-xl shadow hover:bg-blue-600 transition duration-300">
+       View on Play Store
+    </a>
+  </div>
+</div>
+
+    </div>
+  </section>
+
+  <!-- Carousel Script -->
+  <script>
+    let currentSlide = 0;
+    const carousel = document.getElementById('spendlyCarousel');
+    const totalSlides = carousel.children.length;
+
+    function showSlide(index) {
+      if (index < 0) index = totalSlides - 1;
+      if (index >= totalSlides) index = 0;
+      currentSlide = index;
+      carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+    }
+
+    function prevSlide() { showSlide(currentSlide - 1); }
+    function nextSlide() { showSlide(currentSlide + 1); }
+  </script>
+
+
+
+  <!-- Experience Timeline -->
+  <section class="py-20 px-6 max-w-6xl mx-auto">
+    <h2 class="text-3xl font-bold text-blue-400 mb-10 text-center">Experience Timeline</h2>
+
+    <div class="relative">
+      <!-- Vertical line -->
+      <div class="absolute left-4 top-0 h-full border-l-2 border-gray-700"></div>
+
+      <!-- Timeline Items -->
+      <div class="space-y-10">
+        <!-- Photon Infotech -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <!-- Dot -->
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <!-- Content -->
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">Photon Infotech | Senior Android Developer</h3>
+            <span class="text-gray-400 text-sm">Jun 2025 – Dec 2025</span>
+            <p class="text-gray-300 mt-1 text-sm">Enhanced banking app UI/UX, reusable modular components, TalkBack
+              accessibility.</p>
+          </div>
+        </div>
+
+        <!-- Cognizant -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">Cognizant | Senior Android Developer</h3>
+            <span class="text-gray-400 text-sm">Sep 2022 – Feb 2025</span>
+            <p class="text-gray-300 mt-1 text-sm">Built Clean & Event-Driven apps, led 8 developers, 70% unit test
+              coverage, optimized load time by 35%.</p>
+          </div>
+        </div>
+
+        <!-- TCS -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">TCS | Senior Android Developer</h3>
+            <span class="text-gray-400 text-sm">Feb 2021 – Sep 2022</span>
+            <p class="text-gray-300 mt-1 text-sm">Developed Macy’s Bag Module, multi-module architecture, reduced cart
+              abandonment by 20%, mentoring.</p>
+          </div>
+        </div>
+
+        <!-- Score Info -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">Score Information Technologies Ltd. | Android Developer</h3>
+            <span class="text-gray-400 text-sm">Feb 2020 – Feb 2021</span>
+            <p class="text-gray-300 mt-1 text-sm">Bug Notifier: MVVM, RoomDB offline caching, real-time updates,
+              improved issue resolution time by 40%.</p>
+          </div>
+        </div>
+
+        <!-- MaxMobility -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">MaxMobility Pvt. Ltd. | Android Developer</h3>
+            <span class="text-gray-400 text-sm">Jul 2018 – Feb 2020</span>
+            <p class="text-gray-300 mt-1 text-sm">ViewKart, GrabLoyalty, m-Governance: offline-first apps, TDD,
+              responsive UI, warehouse & loyalty apps.</p>
+          </div>
+        </div>
+
+        <!-- Sourceforge -->
+        <div class="flex flex-col md:flex-row md:items-start relative">
+          <div class="absolute left-2 md:left-2">
+            <div class="w-4 h-4 md:w-5 md:h-5 rounded-full bg-blue-500 border-2 border-gray-900"></div>
+          </div>
+          <div class="ml-12 md:ml-10">
+            <h3 class="text-xl font-semibold">Sourceforge Software Services Pvt. Ltd. | Android Developer</h3>
+            <span class="text-gray-400 text-sm">Nov 2016 – Jun 2018</span>
+            <p class="text-gray-300 mt-1 text-sm">HEHealth & GIRI Biometric Survey: offline surveys, multimedia support,
+              secure biometric authentication.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section class="py-20 px-6 bg-gray-800 text-center">
+    <h2 class="text-3xl font-bold text-blue-400 mb-6">Get in Touch</h2>
+    <p class="mb-6 text-gray-300">Email: <a href="mailto:ajit.jaiswal@icloud.com"
+        class="text-blue-400">ajit.jaiswal@icloud.com</a></p>
+    <div class="space-x-4">
+      <a href="https://linkedin.com/in/ajit-jaiswal-154aa325"
+        class="px-6 py-3 bg-blue-600 font-semibold rounded-lg hover:bg-blue-700 transition">LinkedIn</a>
+      <a href="https://github.com/Ajit121"
+        class="px-6 py-3 bg-gray-100 text-gray-900 font-semibold rounded-lg hover:bg-gray-200 transition">GitHub</a>
+    </div>
+  </section>
+
+  <footer class="py-10 text-center text-gray-500">
+    © 2026 Ajit Jaiswal | Senior Android Developer
+  </footer>
+
+</body>
+
+</html>
